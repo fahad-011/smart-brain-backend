@@ -13,10 +13,8 @@ const db = knex({
   // connect to your own database here:
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
-    user : 'postgres',
-    password : 'password',
-    database : 'smart_brain'
+    connectionString : process.env.DATABASE_URL,
+    ssl : true,
   }
 });
 
